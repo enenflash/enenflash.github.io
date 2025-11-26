@@ -1,0 +1,119 @@
+@import url('https://fonts.googleapis.com/css2?family=VT323&display=swap');
+
+* {
+    font-family: "VT323", monospace;
+    font-size: 20px;
+}
+
+h1 {
+    font-size: 60px;
+}
+
+body {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    width: 100%;
+    box-sizing: border-box;
+    margin: 0px;
+    color: #EEE;
+    background: #000;
+    overflow-y: hidden;
+}
+
+/* ---------------------------- CUSTOM SCROLLBAR ---------------------------- */
+
+/* width */
+::-webkit-scrollbar {
+    position: fixed;
+    width: 5px;
+    z-index: -1;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+    background: rgba(0, 0, 0, 0);
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+    border-radius: 5px;
+    background: #555;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+    background: #4AF626;
+}
+
+/* --------------------------------- NAV BAR -------------------------------- */
+
+nav {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    height: 60px;
+    padding: 10px 20px 10px 10px;
+    color: #4AF626;
+    background: rgba(10, 10, 10, 0.5);
+    position: fixed;
+    top: 0px;
+    width: 100%;
+    box-sizing: border-box;
+    z-index: 1;
+}
+
+nav a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 5px;
+
+    color: #4AF626;
+    text-decoration: none;
+    text-shadow: 0px 0px 10px #4AF62675;
+    font-size: 30px;
+}
+
+nav a::hover {
+    cursor: pointer;
+}
+
+nav p {
+    margin: 5px 30px 5px 30px;
+    font-size: 30px;
+}
+
+#content {
+    width: 100%;
+    height: 100vh;
+    overflow-y: scroll;
+}
+
+.content-block {
+    display: block;
+    width: 100%;
+    min-height: 100vh;
+}
+
+.center-container {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.grid-block {
+    min-height: 100vh;
+    display: grid;
+    grid-template-columns: auto auto;
+    grid-template-rows: auto auto;
+}
+
+.self-centered {
+    width: min-content;
+    position: relative;
+    top: 50%;
+    left: 50%;
+}

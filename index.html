@@ -3,9 +3,37 @@
 	<head>
 		<meta charset="UTF-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<link rel="stylesheet" href="css/style.css">
 	</head>
-	<body>
-		<p>Hello World.</p>
+	<div class="scan-lines"></div>
+	<body> 
+		<nav>
+			<a id="home-btn">Isabelle Tang</a>
+			<span style="display:flex;flex-direction:row;align-items:center;">
+				<a id="skills-btn">skills</a>
+				<p>|</p> 
+				<a id="projects-btn">projects</a>
+				<p>|</p> 
+				<a>referees</a>
+			</span>
+		</nav> 
+		<div id="content"></div>
 	</body>
+	<script src="js/jquery-3.7.1.min.js"></script>
+	<script>
+		$(document).ready(function() {
+			$("#content").load("pages/home.html");
+			// $("#content").load("pages/skills.html");
+			
+			$("#home-btn").click(function() {
+				$("#content").load("pages/home.html");
+			});
+			$("#skills-btn").click(function() {
+				$("#content").load("pages/skills.html");
+			});
+			$("#projects-btn").click(function() {
+				$("#content").load("pages/projects.html");
+			});
+		});
+	</script>
 </html>
-
